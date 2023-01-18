@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import CartItem from "../components/cart-item/cart-item.component";
 
 const addQuantity = (cartItems, productToAdd) =>
   cartItems.map((cartItem) =>
@@ -13,7 +12,7 @@ const addCartItem = (cartItems, productToAdd) => {
     (cartItem) => cartItem.id === productToAdd.id
   );
   if (existingCartItem) {
-    addQuantity(cartItems, productToAdd);
+    return addQuantity(cartItems, productToAdd);
   }
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
