@@ -1,4 +1,5 @@
 import { compose, createStore, applyMiddleware } from "redux";
+// eslint-disable-next-line
 import logger from "redux-logger";
 
 import { rootReducer } from "./root-reducer";
