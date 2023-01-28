@@ -24,7 +24,6 @@ const CheckoutItem = ({ item }) => {
   const dispatch = useDispatch();
 
   const { cartItems } = useSelector(selectCart);
-  console.log(cartItems);
 
   const incrementQuantityHandler = () =>
     dispatch(addItemToCart(cartItems, item));
