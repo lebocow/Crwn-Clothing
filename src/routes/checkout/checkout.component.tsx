@@ -42,6 +42,7 @@ const Checkout = () => {
       {cartItems.map(
         useCallback(
           (item) => <CheckoutItem key={item.id} item={item} />,
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           [cartItems]
         )
       )}

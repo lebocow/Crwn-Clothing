@@ -17,7 +17,11 @@ const CartDropdown = () => {
   const { cartItems } = useSelector(selectCart);
   const navigate = useNavigate();
 
-  const goToCheckoutHandler = useCallback(() => navigate("/checkout"), []);
+  const goToCheckoutHandler = useCallback(
+    () => navigate("/checkout"),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  );
 
   return (
     <CartDropdownContainer>

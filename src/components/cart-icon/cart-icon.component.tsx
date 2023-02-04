@@ -16,6 +16,7 @@ const CartIcon = () => {
 
   const toggleIsCartOpen = useCallback(
     () => dispatch(setIsCartOpen(!isCartOpen)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [isCartOpen]
   );
 

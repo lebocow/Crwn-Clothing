@@ -18,6 +18,7 @@ const Directory: FC<DirectoryProps> = ({ categories }) => {
       {categories.map(
         useCallback(
           (category) => <DirectoryItem key={category.id} category={category} />,
+          // eslint-disable-next-line react-hooks/exhaustive-deps
           [categories]
         )
       )}
