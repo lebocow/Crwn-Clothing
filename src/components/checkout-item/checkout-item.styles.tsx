@@ -8,6 +8,10 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+
+  @media only screen and (max-width: 31.626em) {
+    font-size: 14px;
+  }
 `;
 
 export const CheckoutImageContainer = styled.div`

@@ -7,6 +7,10 @@ export const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media only screen and (max-width: 33.5em) {
+    font-size: 14px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -26,4 +30,8 @@ export const NavLinks = styled.div`
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+
+  @media only screen and (max-width: 33.5em) {
+    padding: 10px 7px;
+  }
 `;

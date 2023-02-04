@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { useCallback } from "react";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import PaymentForm from "../../components/payment-form/payment-form.component";
@@ -38,9 +39,12 @@ const Checkout = () => {
           <span>Remove</span>
         </HeaderBlock>
       </CheckoutHeader>
-      {cartItems.map((item) => (
-        <CheckoutItem key={item.id} item={item} />
-      ))}
+      {cartItems.map(
+        useCallback(
+          (item) => <CheckoutItem key={item.id} item={item} />,
+          [cartItems]
+        )
+      )}
       <Total>Total: ${cartTotal}</Total>
       <PaymentForm />
     </CheckoutContainer>

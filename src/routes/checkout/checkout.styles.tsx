@@ -7,6 +7,15 @@ export const CheckoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+
+  @media only screen and (max-width: 48em) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 33.5em) {
+    width: 100%;
+    font-size: 10px;
+  }
 `;
 
 export const CheckoutHeader = styled.div`
@@ -29,4 +38,8 @@ export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+
+  @media only screen and (max-width: 31.625em) {
+    font-size: 20px;
+  }
 `;

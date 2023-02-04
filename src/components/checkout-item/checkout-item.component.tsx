@@ -19,13 +19,13 @@ import {
 } from "./checkout-item.styles";
 
 import { CartItem } from "../../store/cart/cart.types";
-import { FC } from "react";
+import { FC, memo } from "react";
 
 type CheckoutItemProps = {
   item: CartItem;
 };
 
-const CheckoutItem: FC<CheckoutItemProps> = ({ item }) => {
+const CheckoutItem: FC<CheckoutItemProps> = memo(({ item }) => {
   const { name, imageUrl, quantity, price } = item;
 
   const dispatch = useDispatch();
@@ -63,6 +63,6 @@ const CheckoutItem: FC<CheckoutItemProps> = ({ item }) => {
       </CheckoutRemoveButton>
     </CheckoutItemContainer>
   );
-};
+});
 
 export default CheckoutItem;

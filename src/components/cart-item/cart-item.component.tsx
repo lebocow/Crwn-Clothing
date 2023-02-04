@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import {
   CartItemContainer,
   CartItemImage,
@@ -13,20 +13,20 @@ type CartItemProps = {
   cartItem: TCartItem;
 };
 
-const CartItem: FC<CartItemProps> = ({
-  cartItem: { name, imageUrl, price, quantity },
-}) => {
-  return (
-    <CartItemContainer>
-      <CartItemImage src={imageUrl} alt={name} />
-      <CartItemDetails>
-        <CartItemDetailsName>{name}</CartItemDetailsName>
-        <CartItemDetailsPrice>
-          {quantity} x ${price}
-        </CartItemDetailsPrice>
-      </CartItemDetails>
-    </CartItemContainer>
-  );
-};
+const CartItem: FC<CartItemProps> = memo(
+  ({ cartItem: { name, imageUrl, price, quantity } }) => {
+    return (
+      <CartItemContainer>
+        <CartItemImage src={imageUrl} alt={name} />
+        <CartItemDetails>
+          <CartItemDetailsName>{name}</CartItemDetailsName>
+          <CartItemDetailsPrice>
+            {quantity} x ${price}
+          </CartItemDetailsPrice>
+        </CartItemDetails>
+      </CartItemContainer>
+    );
+  }
+);
 
 export default CartItem;

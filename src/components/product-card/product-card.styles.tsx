@@ -46,8 +46,4 @@ export const Footer = styled.div`
     width: 90%;
     margin-bottom: 15px;
   }
-
-  .price {
-    width: 10%;
-  }
 `;

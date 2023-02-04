@@ -8,6 +8,9 @@ export const SignInContainer = styled.div`
   h2 {
     margin: 10px 0;
   }
+  @media only screen and (max-width: 64em) {
+    margin: 0 auto;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
